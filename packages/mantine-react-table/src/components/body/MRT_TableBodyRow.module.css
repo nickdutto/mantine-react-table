@@ -1,3 +1,5 @@
+/* !Firefox bug setting background color renders over cell borders (Bugzilla #688556) */
+
 .root {
   --hover-thickness: 3px;
   --drag-thickness: 1px;
@@ -8,15 +10,15 @@
 
   /* default background-color */
   &:not([data-striped], [data-striped='false']) {
-    background-color: var(--mrt-base-background-color);
+    /* background-color: var(--mrt-base-background-color); */
   }
   /* striped background-colors (take detail panels and virtualization into account) */
   &:not([data-selected], [data-row-pinned]) {
     &[data-striped='odd'] {
-      background-color: var(--mrt-striped-row-background-color);
+      /* background-color: var(--mrt-striped-row-background-color); */
     }
     &[data-striped='even'] {
-      background-color: var(--mrt-striped-row-background-color);
+      /* background-color: var(--mrt-striped-row-background-color); */
     }
   }
 
@@ -25,7 +27,7 @@
     td {
       &[data-column-pinned] {
         &::before {
-          background-color: var(--mrt-pinned-column-background-color);
+          /* background-color: var(--mrt-pinned-column-background-color); */
         }
       }
     }
@@ -33,7 +35,7 @@
       td {
         &[data-column-pinned] {
           &::before {
-            background-color: var(--mrt-striped-row-background-color);
+            /* background-color: var(--mrt-striped-row-background-color); */
           }
         }
       }
@@ -42,7 +44,7 @@
       td {
         &[data-column-pinned] {
           &::before {
-            background-color: var(--mrt-striped-row-background-color);
+            /* background-color: var(--mrt-striped-row-background-color); */
           }
         }
       }
@@ -51,7 +53,7 @@
 
   td {
     &[data-column-pinned] {
-      background-color: var(--mrt-pinned-column-background-color);
+      /* background-color: var(--mrt-pinned-column-background-color); */
       opacity: 0.97;
       position: sticky;
       z-index: 1;
@@ -100,14 +102,14 @@
   /* end column pinning styles */
   /* row pinning styles */
   &[data-row-pinned] {
-    background-color: var(--mantine-color-body);
+    /* background-color: var(--mantine-color-body); */
     bottom: calc(var(--mrt-pinned-row-bottom) * 1px);
     opacity: 0.97;
     top: calc(var(--mrt-pinned-row-top) * 1px);
 
     td {
       &::before {
-        background-color: var(--mrt-pinned-row-background-color);
+        /* background-color: var(--mrt-pinned-row-background-color); */
         content: '';
         height: 100%;
         left: 0;
@@ -117,10 +119,10 @@
         z-index: -1;
       }
       &[data-column-pinned] {
-        background-color: var(--mrt-pinned-column-background-color);
+        /* background-color: var(--mrt-pinned-column-background-color); */
 
         &::before {
-          background-color: var(--mrt-pinned-row-background-color);
+          /* background-color: var(--mrt-pinned-row-background-color); */
           content: '';
           height: 100%;
           left: 0;
@@ -141,14 +143,14 @@
 
   /* selection styles */
   &[data-selected] {
-    background-color: var(--mantine-color-body);
+    /* background-color: var(--mantine-color-body); */
 
     td {
       &[data-column-pinned] {
-        background-color: var(--mrt-pinned-column-background-color);
+        /* background-color: var(--mrt-pinned-column-background-color); */
 
         &::before {
-          background-color: var(--mrt-selected-row-background-color);
+          /* background-color: var(--mrt-selected-row-background-color); */
         }
       }
     }
