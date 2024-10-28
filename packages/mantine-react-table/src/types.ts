@@ -878,10 +878,6 @@ export type MRT_TableOptions<TData extends MRT_RowData> = Omit<
    * @link https://www.mantine-react-table.com/docs/guides/localization
    */
   localization?: Partial<MRT_Localization>;
-  mantinePaginationSelectProps?: HTMLPropsRef<HTMLInputElement> &
-    Partial<SelectProps>;
-  mantinePaginationActionIconProps?: HTMLPropsRef<HTMLButtonElement> &
-    Partial<ActionIconProps>;
   mantineBottomToolbarProps?:
     | ((props: {
         table: MRT_TableInstance<TData>;

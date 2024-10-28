@@ -38,8 +38,6 @@ export const MRT_TablePagination = <TData extends MRT_RowData>({
         IconChevronRightPipe,
       },
       localization,
-      mantinePaginationActionIconProps,
-      mantinePaginationSelectProps,
       mantinePaginationProps,
       paginationDisplayMode,
       rowCount,
@@ -93,7 +91,6 @@ export const MRT_TablePagination = <TData extends MRT_RowData>({
             data={paginationProps?.rowsPerPageOptions ?? defaultRowsPerPage}
             onChange={(value: null | string) => setPageSize(+(value as string))}
             value={pageSize.toString()}
-            {...mantinePaginationSelectProps}
           />
         </Group>
       )}
@@ -124,7 +121,6 @@ export const MRT_TablePagination = <TData extends MRT_RowData>({
                 disabled={pageIndex <= 0}
                 onClick={() => setPageIndex(0)}
                 variant="subtle"
-                {...mantinePaginationActionIconProps}
               >
                 <IconChevronLeftPipe />
               </ActionIcon>
@@ -135,7 +131,6 @@ export const MRT_TablePagination = <TData extends MRT_RowData>({
               disabled={pageIndex <= 0}
               onClick={() => setPageIndex(pageIndex - 1)}
               variant="subtle"
-              {...mantinePaginationActionIconProps}
             >
               <IconChevronLeft />
             </ActionIcon>
@@ -145,7 +140,6 @@ export const MRT_TablePagination = <TData extends MRT_RowData>({
               disabled={lastRowIndex >= totalRowCount}
               onClick={() => setPageIndex(pageIndex + 1)}
               variant="subtle"
-              {...mantinePaginationActionIconProps}
             >
               <IconChevronRight />
             </ActionIcon>
@@ -156,7 +150,6 @@ export const MRT_TablePagination = <TData extends MRT_RowData>({
                 disabled={lastRowIndex >= totalRowCount}
                 onClick={() => setPageIndex(numberOfPages - 1)}
                 variant="subtle"
-                {...mantinePaginationActionIconProps}
               >
                 <IconChevronRightPipe />
               </ActionIcon>
